@@ -9,6 +9,7 @@ services:
         command: [ mysqld, --character-set-server=utf8mb4, --collation-server=utf8mb4_unicode_ci, --innodb-file-per-table=1 ]
         volumes:
             - pimcore-database:/var/lib/mysql
+            - ./db-dump/:/docker-entrypoint-initdb.d
         environment:
             - MYSQL_ROOT_PASSWORD=ROOT
             - MYSQL_DATABASE=pimcore
@@ -23,6 +24,11 @@ services:
             retries: 6
             start_period: 1m
             timeout: 3s
+
+    adminer:
+        image: adminer
+        ports:
+            - 8080:8080
 
     nginx:
         image: nginx:stable-alpine

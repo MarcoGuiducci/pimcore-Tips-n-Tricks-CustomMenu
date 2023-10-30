@@ -59,17 +59,10 @@ services:
         resource: '../src/Command/*'
         tags: [ 'console.command' ]
 
-
-
-    # Example custom templating helper
-    # App\Templating\Helper\Example:
-    #     # templating helpers need to be public as they
-    #     # are fetched from the container on demand
-    #     public: true
-    #     tags:
-    #         - { name: templating.helper, alias: fooBar }
-
-    # Example event listener for objects
-    # App\EventListener\TestListener:
-    #     tags:
-    #         - { name: kernel.event_listener, event: pimcore.dataobject.preUpdate, method: onObjectPreUpdate }
+    #
+    # EVENT LISTENER
+    #
+    App\EventListener\PimcoreAdminListener:
+        tags:
+            - { name: kernel.event_listener, event: pimcore.bundle_manager.paths.css, method: addCSSFiles }
+            - { name: kernel.event_listener, event: pimcore.bundle_manager.paths.js, method: addJSFiles }
