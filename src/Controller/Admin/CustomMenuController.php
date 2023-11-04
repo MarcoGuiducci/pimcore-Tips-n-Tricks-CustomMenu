@@ -3,28 +3,11 @@
 namespace App\Controller\Admin;
 
 use Pimcore\Db;
-use Pimcore\Log\Simple;
-use Pimcore\Model\User\Role;
-use Pimcore\Model\DataObject;
-use App\Service\CablePdfService;
-use App\Utils\ProductFamilyUtils;
-use Pimcore\Model\DataObject\Cable;
-use Pimcore\Model\DataObject\Folder;
-use Pimcore\Model\DataObject\Service;
-use Pimcore\Model\DataObject\Integration;
-use Pimcore\Model\DataObject\ProductLine;
-use Pimcore\Bundle\AdminBundle\Controller;
-use Pimcore\Model\DataObject\Construction;
-use Pimcore\Model\DataObject\ProductFamily;
-use Pimcore\Model\DataObject\AbstractObject;
 use Symfony\Component\HttpFoundation\Request;
-use App\Service\AttributeProductFamilyService;
 use Pimcore\Bundle\AdminBundle\Controller\AdminAbstractController;
-use Pimcore\Bundle\AdminBundle\Controller\GDPR\AdminController;
 use Pimcore\Bundle\ApplicationLoggerBundle\ApplicationLogger;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use Sintra\B2BSynchronizationBundle\Utils\SynchronizationUtils;
 
 /**
  * @Route("/admin/custom-menu")

@@ -285,7 +285,7 @@ pimcore.plugin.CustomMenu.settings = Class.create({
                         }.bind(this));
 
                     } else {
-                        pimcore.helpers.showNotification(t('error'), t('custommenue_settings_save_error'),
+                        pimcore.helpers.showNotification(t('error'), t('custommenu_settings_save_error'),
                             'error', t(res.message));
                     }
                 } catch (e) {

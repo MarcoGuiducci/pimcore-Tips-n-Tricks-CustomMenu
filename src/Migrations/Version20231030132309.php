@@ -17,7 +17,7 @@ final class Version20231030132309 extends AbstractMigration
      */
     private $tablesToInstall = [
         'mm2_to_awg_conversion' =>
-        "CREATE TABLE IF NOT EXISTS `mm2_to_awg_conversion` (
+            "CREATE TABLE IF NOT EXISTS `mm2_to_awg_conversion` (
                 `id` int(11) NOT NULL AUTO_INCREMENT,
                 `mm2` decimal(10,2) DEFAULT NULL,
                 `awg` varchar(255) DEFAULT NULL,
